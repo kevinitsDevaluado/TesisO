@@ -1,0 +1,68 @@
+{% load static %}
+
+<!-- header -->
+<header>
+    <!-- header inner -->
+    <div class="header">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col logo_section">
+                    <div class="full">
+                        <div class="center-desk">
+                            <div class="logo">
+                                <a href="index.html"><img src="{% static 'mainpage/index/images/logo.png' %}" alt="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                    <div class="location_icon_bottum_tt">
+                        <ul>
+                            <li><img src="{% static 'mainpage/index/icon/loc1.png' %}" />{{ mainpage.address }}</li>
+                            <li><img src="{% static 'mainpage/index/icon/call1.png' %}" /> {{ mainpage.phone }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 location_icon_bottum">
+                   <div class="row">
+                        <div class="col-md-8 ">
+                            <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu">
+                                        <ul class="menu-area-main">
+                                            <li class="active"> <a href="{% url 'index' %}">Inicio</a> </li>
+                                            <li> <a href="#about">Nosotros</a> </li>
+                                            <li><a href="#product">Productos</a></li>
+                                            <li><a href="#testimonial">Testimonios</a></li>
+                                            <li><a href="{% if onepage %}#contact{% else %}/#contact{% endif %}">Contactos</a></li>
+                                            <li>
+                                                {% if request.user.is_superuser %}
+                                                    <a href="{% url 'dashboard' %}">Bienvenid@ {{ request.user.get_short_name }}</a>
+                                                {% else %}
+                                                    <a href="{% url 'login' %}">Iniciar sesión</a>
+                                                {% endif %}
+                                            </li>
+                                            
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <form class="search">
+                                <input class="form-control" type="text" placeholder="Search">
+                                <button><img src="{% static 'mainpage/index/images/search_icon.png' %}"></button>
+                            </form>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end header inner -->
+</header>
+<!-- end header -->

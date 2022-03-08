@@ -1,0 +1,51 @@
+{% load static %}
+
+<!-- footer -->
+<!--  footer -->
+<footr>
+    <div class="footer top_layer ">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="address">
+                        <a href="index.html"> <img src="{% static 'mainpage/index/images/logo.png' %}" alt="logo" /></a>
+                        <p>{{ mainpage.desc }}</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    
+                </div>
+
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="address">
+                        <h3>Contactos</h3>
+
+                        <ul class="loca">
+                            <li>
+                                <a href="#"><img src="{% static 'mainpage/index/icon/loc.png' %}" alt="#" /></a>{{ mainpage.address }}
+                            <li>
+                                <a href="#"><img src="{% static 'mainpage/index/icon/email.png' %}" alt="#" /></a>{{ mainpage.email }}</li>
+                            <li>
+                                <a href="#"><img src="{% static 'mainpage/index/icon/call.png' %}" alt="#" /></a>{{ mainpage.phone }} </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="copyright">
+        <div class="container">
+            <p>© 2022 All Rights Reserved. Design By<a href="">{{ mainpage.name }}</a></p>
+        
+    </div>
+    </div>
+</footr>
+
+<!-- end footer -->

@@ -1,0 +1,473 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>{{ title }}</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{{ mainpage.get_icon_image }}" rel="icon">
+    <link href="{{ mainpage.get_icon_image }}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'mainpage/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'lib/fontawesome-5.15.3/css/all.min.css' %}"/>
+    <link href="{% static 'mainpage/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'mainpage/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'mainpage/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'mainpage/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'mainpage/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'mainpage/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'mainpage/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css' %}" rel="stylesheet">
+
+
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'mainpage/index/css/style.css' %}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{% static 'mainpage/index/css/responsive.css' %}">
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'mainpage/index/images/fevicon.png" type="image/gif' %}" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{% static 'mainpage/index/css/jquery.mCustomScrollbar.min.css' %}">
+
+
+
+</head>
+
+<body class="main-layout">
+
+{% include 'mainpage/header.html' %}
+
+{% block content %}
+
+<main id="main">
+    <section class="slider_section">
+        <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="first-slide" src="{% static 'mainpage/index/images/banner.jpg' %}" alt="First slide">
+                    <div class="container">
+                        <div class="carousel-caption relative">
+                            <h1>FERTILIZANTES</h1>
+                            <span>ORGÁNICOS</span>
+
+                            <p>Hemos desarrollado una línea completa de insumos orgánicos, mejoradores de suelo y repelentes de insectos para agricultores, formuladores y distribuidores.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="second-slide" src="{% static 'mainpage/index/images/banner.jpg' %}" alt="Second slide">
+                    <div class="container">
+                        <div class="carousel-caption relative">
+                            <h1>NUESTROS PRODUCTOS POSEEN UNA</h1>
+                            <span>CALIDAD ÓPTIMA</span>
+
+                            <p>
+                                Elaborados para atender las necesidades de la agricultura y producir alimentos altos en nutrientes de forma orgánica.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="third-slide" src="{% static 'mainpage/index/images/banner.jpg' %}" alt="Third slide">
+                    <div class="container">
+                        <div class="carousel-caption relative">
+                            <h1>INSUMOS PARA</h1>
+                            <span>INSUMOS PARA</span>
+
+                            <p>
+                                Elaborados para atender las necesidades de la agricultura y producir alimentos altos en nutrientes de forma orgánica.
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <i class='fa fa-angle-left'></i>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <i class='fa fa-angle-right'></i>
+            </a>
+        </div>
+    </section>
+
+
+       <!-- about -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                    <div class="about_box">
+                        <h2>Somos una familia <br><strong class="black"> {{ mainpage.name }}</strong></h2>
+                        <p>{{ mainpage.desc }}</p>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                    <div class="about_img">
+                        <figure><img src="{% static 'mainpage/index/images/about.png' %}" alt="img" /></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
+    
+    <!-- for_box -->
+    <div class="for_box_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 co-sm-l2">
+                    <div class="for_box">
+                        <i><img src="{% static 'mainpage/index/images/3.png' %}" alt="#"/></i>
+                        <span>1996923</span>
+                        <h3>Productos</h3>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 co-sm-l2">
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 co-sm-l2">
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 co-sm-l2">
+                    <div class="for_box">
+                        <i><img src="{% static 'mainpage/index/images/1.png' %}" alt="#"/></i>
+                        <span>1623</span>
+                        <h3>Categorías</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end for_box -->
+
+    <!-- offer -->
+    <div class="offer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h2>Galería<strong class="black"> Imagenes</strong></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offer-bg">
+            <div class="container">
+                <div class="row">
+                    {% for a in gallery %}
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 ">
+                        <div class="offer_box">
+                            <h3> {{ a.name }} </h3>
+                            <figure>
+                                <a href="{{ a.get_image }}" class="venobox"
+                                   data-gall="gallery-item">
+                                    <img src="{{ a.get_image }}" alt="" class="img-fluid">
+                                </a>
+                            </figure>
+                            <p> {{ a.desc }} </p>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end offer -->
+
+
+    <!-- product -->
+    <div id="product" class="product">
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title">
+                            <h2><strong class="black"> Categorías</strong></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                    <div class="row">
+                        {% for a in categorias %}
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="product_box">
+                                <figure><img src=" {{ a.image.url }} " alt="#" />
+                                    <a href="{% url 'product_Details' a.id %}">
+                                        <h3> {{ a.name }} </h3>
+                                    </a>
+                                    </figure>
+                            </div>
+                        </div>
+                        {% endfor %}
+                     
+                      
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>  
+    <!-- end product -->
+
+
+
+    <!-- clients -->
+    <div id="testimonial" class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h2>Comentarios</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clients_red">
+        <div class="container">
+            <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#testimonial_slider" data-slide-to="0" class="active"></li>
+                    {% for a in testimonials %}
+                    <li data-target="#testimonial_slider" data-slide-to="  {{ forloop.counter }} " class=""></li>
+                    {% endfor %}
+                    
+                </ul>
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testomonial_section">
+
+                            <div class="full testimonial_cont text_align_center cross_layout">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 pa_right">
+                                        <div class="testomonial_img">
+                                            <i><img src="{% static 'mainpage/index/images/tes.png' %}" alt="#"/></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 pa_left">
+                                        <div class="cross_inner">
+                                            <h3>Johndue<br><strong class="ornage_color">Farm & CO</strong></h3>
+                                            <p><img src="{% static 'mainpage/index/icon/1.png' %}" alt="#" />ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                                                <img src="{% static 'mainpage/index/icon/2.png' %}" alt="#" />
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% for a in testimonials %}
+
+                    <div class="carousel-item ">
+
+                        <div class="testomonial_section">
+                            <div class="full center">
+                            </div>
+                            <div class="full testimonial_cont text_align_center cross_layout">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 pa_right">
+                                        <div class="testomonial_img">
+                                            <i><img src="{% static 'mainpage/index/images/tes.png' %}" alt="#"/></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 pa_left">
+                                        <div class="cross_inner">
+                                            <h3>{{ a.names }}<br><strong class="ornage_color">{{ a.email }}</strong></h3>
+                                            <p><img src="{% static 'mainpage/index/icon/1.png' %}" alt="#" />
+                                                {{ a.message }}
+                                                <img src="{% static 'mainpage/index/icon/2.png' %}" alt="#" />
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+  
+    <!-- end clients -->
+    <!-- contact -->
+
+
+
+
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contactos</h2>
+                <p></p>
+            </div>
+        </div>
+
+        <div>
+            <div id="map"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?key={{ keygooglemaps }}"></script>
+        </div>
+
+        <div class="container">
+            <div class="row mt-5">
+
+                <div class="col-lg-12 col-md-6">
+
+                    <form action="{% url 'index' %}" id="frmComments" method="post" class="">
+                        {% csrf_token %}
+                        
+                        {% for field in form.visible_fields %}
+                            <div class="form-group">
+                                <label><b>{{ field.label }}:</b></label>
+                                {{ field }}
+                            </div>
+                        {% endfor %}
+                        <div class="text-center">
+                            <button class="btn btn-primary btnSendCommets" type="submit"><i
+                                    class="fas fa-envelope"></i>
+                                Enviar comentario
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+    
+
+
+
+    <main/>
+    <!-- End #main -->
+
+    {% include 'mainpage/footer.html' %}
+
+      <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="{% static 'mainpage/index/js/jquery.min.js' %}"></script>
+    <script src="{% static 'mainpage/index/js/popper.min.js' %}"></script>
+    <script src="{% static 'mainpage/index/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'mainpage/index/js/jquery-3.0.0.min.js' %}"></script>
+    <script src="{% static 'mainpage/index/js/plugin.js' %}"></script>
+    <!-- sidebar -->
+    <script src="{% static 'mainpage/index/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script src="{% static 'mainpage/index/js/custom.js' %}"></script>
+    <!-- javascript -->
+    <script src="{% static 'mainpage/index/js/owl.carousel.js' %}"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js' %}"></script>
+
+     <!-- Send Comments-->
+     <script src="{% static 'js/functions.js' %}"></script>
+     <script src="{% static 'mainpage/js/sendcomments.js' %}"></script>
+      <!--Formvalidation-->
+    <link rel="stylesheet" href="{% static 'lib/formvalidation-1.8.0/css/formValidation.min.css' %}">
+    <script src="{% static 'lib/formvalidation-1.8.0/es6-shim.min.js' %}"></script>
+    <script src="{% static 'lib/formvalidation-1.8.0/js/FormValidation.min.js' %}"></script>
+    <script src="{% static 'lib/formvalidation-1.8.0/js/plugins/Bootstrap.min.js' %}"></script>
+    <script src="{% static 'lib/formvalidation-1.8.0/js/locales/es_ES.min.js' %}"></script>
+    <!-- Jquery-Confirm-->
+    <script src="{% static 'lib/jquery-confirm-3.3.4/jquery-confirm.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'lib/jquery-confirm-3.3.4/jquery-confirm.min.css' %}"/>
+    <!-- Sweetalert2-->
+    <script src="{% static 'lib/sweetalert2-11.0.16/sweetalert2.all.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'lib/sweetalert2-11.0.16/sweetalert2.min.css' %}"/>
+    <script src="{% static 'mainpage/js/main.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function() {
+
+                $(this).addClass('transition');
+            }, function() {
+
+                $(this).removeClass('transition');
+            });
+        });
+    </script>
+    <script>
+        function initMap() {
+            var latitude = {{ mainpage.get_latitude }};
+            var longitude = {{ mainpage.get_longitude }};
+            const myLatLng = {
+                lat: latitude, lng: longitude
+            }
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 16,
+                center: myLatLng
+            });
+
+            const marker = new google.maps.Marker({
+                position: myLatLng,
+                map,
+                title: "Hello World!"
+            });
+
+            const infowindow = new google.maps.InfoWindow({
+                content: '<p>' + "{{ mainpage.name }}" + '</p>'
+            });
+
+            marker.addListener("click", () => {
+                infowindow.open(map, marker);
+            });
+
+        }
+
+        $(function () {
+            initMap();
+        })
+
+    </script>
+    <!-- google map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+    <!-- end google map js -->
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}
+</body>
+</html>
